@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>dailys_mod 演示</title>
+</head>
+
+
+<body>
+<div id="dailys">
+
+</div>
+
+<div>
+    <p>注释：</p>
+    <p>v1.0 2019.11.15 制定div,再对应位置生成 制定时间段的ul日期(几号)和星期几 开发者根据需要设置样式 </p>
+    <p>id_name 需要添加到元素的id </p>
+    <p>now_index 当前日期在排序中的位置 </p>
+    <p>day_count 需要显示的天数 </p>
+    <p>方法要添加到 声明后面 </p>
+</div>
+<script type='text/javascript' src='./daliys.js'></script>
+<script type='text/javascript'>
+
+
+var dailys = new dailys_mod({
+    id_name:'dailys',
+    now_index:3,
+    day_count:10
+})
+
+var lis = document.getElementById("dailys").getElementsByTagName("li");
+for(var i=0;i<lis.length;i++){
+    lis[i].addEventListener("click",function(){
+        alert("a")
+    })
+}
+
+</script>
+</body>
+</html>
